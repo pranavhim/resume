@@ -1,0 +1,157 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  animation: popUp 0.7s ease-out;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #007acc;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1em;
+  color: #007acc;
+}
+
+h2 {
+  font-size: 1.4em;
+  color: #444;
+  border-left: 5px solid #007acc;
+  padding-left: 10px;
+  margin-top: 30px;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.contact a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #007acc;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.sport-tag {
+  display: inline-block;
+  background: #007acc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+}
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #007acc;
+  color: white;
+}
+
+td {
+  background-color: #f5faff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+tr:hover td {
+  background-color: #e6f2fb;
+}
+
+.grade {
+  cursor: help;
+  position: relative;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.grade::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007acc;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.grade:hover::after {
+  opacity: 1;
+}
+
